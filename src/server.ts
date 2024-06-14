@@ -241,7 +241,6 @@ app.get("/", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
-server.listen(PORT, "0.0.0.0", (err: any) => {
-  if (err) throw err;
+server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
